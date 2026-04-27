@@ -6,8 +6,11 @@
     "tags": ["Blender", "Stylized", "Game Ready"],
     "link": "https://example.com/project/dream-room",
     "accent": "#f7d7e4",
-    "coverImage": "",
-    "gallery": []
+    "coverImage": "./images/project-1/cover.jpg",
+    "gallery": [
+      "./images/project-1/render-1.jpg",
+      "./images/project-1/render-2.jpg"
+    ]
   },
   {
     "id": "celestial-character-props",
@@ -16,8 +19,11 @@
     "tags": ["3D Modeling", "Texturing", "Realtime"],
     "link": "https://example.com/project/celestial-props",
     "accent": "#f2c8da",
-    "coverImage": "",
-    "gallery": []
+    "coverImage": "./images/project-2/cover.jpg",
+    "gallery": [
+      "./images/project-2/render-1.jpg",
+      "./images/project-2/render-2.jpg"
+    ]
   },
   {
     "id": "soft-market-environment",
@@ -26,7 +32,10 @@
     "tags": ["Environment", "Modular", "Lookdev"],
     "link": "https://example.com/project/soft-market",
     "accent": "#f9e4ee",
-    "coverImage": "",
-    "gallery": []
+    "coverImage": "./images/project-3/cover.jpg",
+    "gallery": [
+      "./images/project-3/render-1.jpg",
+      "./images/project-3/render-2.jpg"
+    ]
   }
 ]

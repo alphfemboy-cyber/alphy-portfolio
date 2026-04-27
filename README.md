@@ -39,6 +39,15 @@ GitHub Pages publicara la nueva version automaticamente.
 - `coverImage` sirve para la portada.
 - `gallery` sirve para la galeria del proyecto.
 
+## Donde poner las imagenes
+
+Usa la carpeta `images/`.
+
+- [images/README.md](C:/Users/juanz/Downloads/alphy-portfolio/images/README.md)
+- `images/project-1/`
+- `images/project-2/`
+- `images/project-3/`
+
 ## Subir a GitHub Pages
 
 1. Crea un repositorio nuevo en GitHub.
