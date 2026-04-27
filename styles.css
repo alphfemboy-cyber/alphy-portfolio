@@ -250,28 +250,6 @@ textarea {
   object-fit: cover;
 }
 
-.floating-note {
-  position: absolute;
-  top: 6%;
-  right: 8%;
-  display: grid;
-  gap: 4px;
-  padding: 14px 16px;
-  border-radius: 18px;
-  background: rgba(251, 221, 233, 0.88);
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  box-shadow: 0 12px 32px rgba(229, 180, 201, 0.18);
-}
-
-.floating-note span {
-  font-size: 0.8rem;
-  color: var(--text-soft);
-}
-
-.floating-note strong {
-  color: #86586d;
-}
-
 .highlights {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
