@@ -395,6 +395,27 @@ textarea {
   overflow: hidden;
 }
 
+.project-empty {
+  padding: 32px;
+  border-radius: 28px;
+  border: 1px solid var(--border);
+  background: rgba(250, 225, 236, 0.82);
+  box-shadow: var(--shadow);
+}
+
+.project-empty h3 {
+  margin: 10px 0 8px;
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: #704c5d;
+}
+
+.project-empty p:last-child {
+  margin-bottom: 0;
+  line-height: 1.75;
+  color: var(--text-soft);
+}
+
 .project-visual {
   position: relative;
   display: block;

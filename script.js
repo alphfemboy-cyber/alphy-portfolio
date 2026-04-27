@@ -1,41 +1,7 @@
 const STORAGE_KEY = "alphy-portfolio-projects-draft";
 const PROJECTS_FILE = "./projects.json";
 
-const fallbackProjects = [
-  {
-    id: "dream-room-asset-pack",
-    title: "Dream Room Asset Pack",
-    description:
-      "Coleccion de props estilizados para una habitacion con enfoque en silueta limpia, color suave y optimizacion para tiempo real.",
-    tags: ["Blender", "Stylized", "Game Ready"],
-    link: "https://example.com/project/dream-room",
-    accent: "#f7cade",
-    coverImage: "",
-    gallery: [],
-  },
-  {
-    id: "celestial-character-props",
-    title: "Celestial Character Props",
-    description:
-      "Set de accesorios y piezas de vestuario con detalle ornamental, materiales suaves y lectura clara para escenas cercanas.",
-    tags: ["3D Modeling", "Texturing", "Realtime"],
-    link: "https://example.com/project/celestial-props",
-    accent: "#f2c8da",
-    coverImage: "",
-    gallery: [],
-  },
-  {
-    id: "soft-market-environment",
-    title: "Soft Market Environment",
-    description:
-      "Exploracion visual de assets modulares para un entorno pequeno, pensados para variedad, rendimiento y coherencia de estilo.",
-    tags: ["Environment", "Modular", "Lookdev"],
-    link: "https://example.com/project/soft-market",
-    accent: "#f9e4ee",
-    coverImage: "",
-    gallery: [],
-  },
-];
+const fallbackProjects = [];
 
 const elements = {
   body: document.body,
@@ -121,6 +87,30 @@ function saveProjects() {
 function renderProjects() {
   elements.projectsGrid.innerHTML = "";
   elements.projectList.innerHTML = "";
+
+  if (projects.length === 0) {
+    elements.projectsGrid.innerHTML = `
+      <article class="project-empty reveal is-visible">
+        <p class="eyebrow">No hay proyectos aun</p>
+        <h3>Agrega tu primer proyecto desde el editor</h3>
+        <p>
+          Usa el boton "Editar proyectos" para crear una ficha con descripcion,
+          portada, galeria e links.
+        </p>
+      </article>
+    `;
+    elements.projectList.innerHTML = `
+      <article class="project-item">
+        <div>
+          <strong class="item-title">Sin proyectos cargados</strong>
+          <p class="item-description">
+            Crea tu primer proyecto y luego exporta el JSON para publicarlo.
+          </p>
+        </div>
+      </article>
+    `;
+    return;
+  }
 
   projects.forEach((project) => {
     const cardNode = elements.cardTemplate.content.firstElementChild.cloneNode(true);

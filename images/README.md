@@ -24,3 +24,5 @@ Galeria:
 `./images/project-1/render-3.jpg`
 
 Usa nombres simples y evita espacios.
+
+Las carpetas `project-1`, `project-2` y `project-3` estan vacias para que pongas tus archivos reales.
