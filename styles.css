@@ -539,6 +539,20 @@ textarea {
   margin: 0;
 }
 
+.admin-link {
+  margin-top: 14px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: rgba(91, 75, 82, 0.42);
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+
+.admin-link:hover {
+  color: rgba(91, 75, 82, 0.7);
+}
+
 .editor-drawer {
   position: fixed;
   inset: 0;

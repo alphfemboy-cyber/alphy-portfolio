@@ -1,12 +1,12 @@
 const STORAGE_KEY = "alphy-portfolio-projects-draft";
 const PROJECTS_FILE = "./projects.json";
 const LANGUAGE_KEY = "alphy-portfolio-language";
+const EDITOR_PASSWORD = "alphy-admin";
 const translations = {
   es: {
     "nav.projects": "Proyectos",
     "nav.about": "Sobre mi",
     "nav.contact": "Contacto",
-    "nav.edit": "Editar proyectos",
     "hero.eyebrow": "3D Artist / Modelado y Texturizado",
     "hero.description": "Artista 3D especializado en modelado y texturizado de assets digitales, con enfoque en calidad visual, estilo y optimizacion para tiempo real.",
     "hero.cta": "Ver proyectos",
@@ -28,6 +28,7 @@ const translations = {
     "contact.eyebrow": "Contacto",
     "contact.title": "Hablemos de tu proximo proyecto",
     "contact.note": "Espanol principal, ingles basico para comunicacion simple.",
+    "contact.manage": "Gestion",
     "editor.eyebrow": "Project Editor",
     "editor.title": "Editar proyectos",
     "editor.close": "Cerrar",
@@ -50,7 +51,6 @@ const translations = {
     "nav.projects": "Projects",
     "nav.about": "About",
     "nav.contact": "Contact",
-    "nav.edit": "Edit projects",
     "hero.eyebrow": "3D Artist / Modeling & Texturing",
     "hero.description": "3D artist specialized in modeling and texturing digital assets, with a focus on visual quality, style, and real-time optimization.",
     "hero.cta": "View projects",
@@ -72,6 +72,7 @@ const translations = {
     "contact.eyebrow": "Contact",
     "contact.title": "Let's talk about your next project",
     "contact.note": "Spanish first, basic English for simple communication.",
+    "contact.manage": "Manage",
     "editor.eyebrow": "Project Editor",
     "editor.title": "Edit projects",
     "editor.close": "Close",
@@ -118,6 +119,7 @@ const elements = {
   projectGallery: document.getElementById("project-gallery"),
   projectAccent: document.getElementById("project-accent"),
   langToggle: document.getElementById("lang-toggle"),
+  adminAccess: document.getElementById("admin-access"),
 };
 
 let projects = [];
@@ -231,6 +233,10 @@ function applyLanguage(language) {
   document.querySelectorAll(".item-delete").forEach((button) => {
     button.textContent = currentLanguage === "es" ? "Borrar" : "Delete";
   });
+
+  if (elements.adminAccess) {
+    elements.adminAccess.textContent = currentLanguage === "es" ? "Gestion" : "Manage";
+  }
 }
 
 function renderProjects() {
@@ -483,6 +489,21 @@ function closeEditor() {
   elements.body.classList.remove("editor-open");
 }
 
+function requestEditorAccess() {
+  const promptText = currentLanguage === "es"
+    ? "Contrasena del editor:"
+    : "Editor password:";
+  const value = window.prompt(promptText, "");
+  if (value === EDITOR_PASSWORD) {
+    openEditor();
+    return;
+  }
+
+  if (value !== null && value !== "") {
+    window.alert(currentLanguage === "es" ? "Contrasena incorrecta." : "Incorrect password.");
+  }
+}
+
 function revealElements() {
   const items = document.querySelectorAll(".reveal");
   const observer = new IntersectionObserver(
@@ -510,10 +531,6 @@ elements.exportButton.addEventListener("click", exportProjects);
 elements.importInput.addEventListener("change", importProjects);
 elements.resetProjects.addEventListener("click", restoreDefaults);
 
-elements.openButtons.forEach((button) => {
-  button.addEventListener("click", openEditor);
-});
-
 elements.closeButtons.forEach((button) => {
   button.addEventListener("click", closeEditor);
 });
@@ -522,9 +539,15 @@ elements.langToggle?.addEventListener("click", () => {
   applyLanguage(currentLanguage === "es" ? "en" : "es");
 });
 
+elements.adminAccess?.addEventListener("click", requestEditorAccess);
+
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     closeEditor();
+  }
+
+  if (event.ctrlKey && event.shiftKey && event.key.toLowerCase() === "e") {
+    requestEditorAccess();
   }
 });
 
