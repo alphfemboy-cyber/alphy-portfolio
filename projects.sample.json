@@ -1,0 +1,32 @@
+[
+  {
+    "id": "dream-room-asset-pack",
+    "title": "Dream Room Asset Pack",
+    "description": "Coleccion de props estilizados para una habitacion con enfoque en silueta limpia, color suave y optimizacion para tiempo real.",
+    "tags": ["Blender", "Stylized", "Game Ready"],
+    "link": "https://example.com/project/dream-room",
+    "accent": "#f7d7e4",
+    "coverImage": "",
+    "gallery": []
+  },
+  {
+    "id": "celestial-character-props",
+    "title": "Celestial Character Props",
+    "description": "Set de accesorios y piezas de vestuario con detalle ornamental, materiales suaves y lectura clara para escenas cercanas.",
+    "tags": ["3D Modeling", "Texturing", "Realtime"],
+    "link": "https://example.com/project/celestial-props",
+    "accent": "#f2c8da",
+    "coverImage": "",
+    "gallery": []
+  },
+  {
+    "id": "soft-market-environment",
+    "title": "Soft Market Environment",
+    "description": "Exploracion visual de assets modulares para un entorno pequeno, pensados para variedad, rendimiento y coherencia de estilo.",
+    "tags": ["Environment", "Modular", "Lookdev"],
+    "link": "https://example.com/project/soft-market",
+    "accent": "#f9e4ee",
+    "coverImage": "",
+    "gallery": []
+  }
+]
