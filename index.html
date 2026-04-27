@@ -61,10 +61,13 @@
           </div>
 
           <div class="hero-art reveal" aria-hidden="true">
-            <div class="ribbon ribbon-left"></div>
-            <div class="ribbon ribbon-right"></div>
-            <div class="art-card art-large"></div>
-            <div class="art-card art-small"></div>
+            <div class="hero-photo-frame">
+              <img
+                class="hero-photo"
+                src="./images/profile-photo.png"
+                alt="Portrait of Alphy"
+              />
+            </div>
             <div class="floating-note">
               <span data-i18n="hero.noteTop">Coquette digital mood</span>
               <strong data-i18n="hero.noteBottom">Soft romantic portfolio</strong>
@@ -273,12 +276,12 @@
         <div class="project-content">
           <h3></h3>
           <p class="project-description is-collapsed"></p>
-          <button class="project-toggle" type="button">Ver mas</button>
+          <button class="project-toggle" type="button">Show more</button>
           <div class="project-tags"></div>
           <div class="project-links">
-            <a class="project-link project-open" href="#">Abrir proyecto</a>
+            <a class="project-link project-open" href="#">Open project</a>
             <a class="project-link project-external" target="_blank" rel="noreferrer">
-              Link externo
+              External link
             </a>
           </div>
         </div>
@@ -292,10 +295,10 @@
           <p class="item-description"></p>
         </div>
         <div class="item-actions">
-          <button type="button" class="text-button item-up">Subir</button>
-          <button type="button" class="text-button item-down">Bajar</button>
-          <button type="button" class="text-button item-edit">Editar</button>
-          <button type="button" class="text-button item-delete">Borrar</button>
+          <button type="button" class="text-button item-up">Up</button>
+          <button type="button" class="text-button item-down">Down</button>
+          <button type="button" class="text-button item-edit">Edit</button>
+          <button type="button" class="text-button item-delete">Delete</button>
         </div>
       </article>
     </template>

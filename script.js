@@ -187,12 +187,49 @@ function applyLanguage(language) {
   document.querySelectorAll("[data-i18n]").forEach((node) => {
     const value = translations[currentLanguage][node.dataset.i18n];
     if (typeof value === "string") {
-      node.textContent = value;
+      if (value.includes("<code>")) {
+        node.innerHTML = value;
+      } else {
+        node.textContent = value;
+      }
     }
   });
 
   elements.langToggle?.querySelectorAll("[data-lang-option]").forEach((node) => {
     node.classList.toggle("is-active", node.dataset.langOption === currentLanguage);
+  });
+
+  document.querySelectorAll(".project-open").forEach((link) => {
+    if (link.classList.contains("project-link")) {
+      link.textContent = currentLanguage === "es" ? "Abrir proyecto" : "Open project";
+    }
+  });
+
+  document.querySelectorAll(".project-external").forEach((link) => {
+    link.textContent = currentLanguage === "es" ? "Link externo" : "External link";
+  });
+
+  document.querySelectorAll(".project-toggle").forEach((button) => {
+    if (button.hidden) {
+      return;
+    }
+    const expanded = button.getAttribute("aria-expanded") === "true";
+    button.textContent = expanded
+      ? currentLanguage === "es" ? "Ver menos" : "Show less"
+      : currentLanguage === "es" ? "Ver mas" : "Show more";
+  });
+
+  document.querySelectorAll(".item-up").forEach((button) => {
+    button.textContent = currentLanguage === "es" ? "Subir" : "Up";
+  });
+  document.querySelectorAll(".item-down").forEach((button) => {
+    button.textContent = currentLanguage === "es" ? "Bajar" : "Down";
+  });
+  document.querySelectorAll(".item-edit").forEach((button) => {
+    button.textContent = currentLanguage === "es" ? "Editar" : "Edit";
+  });
+  document.querySelectorAll(".item-delete").forEach((button) => {
+    button.textContent = currentLanguage === "es" ? "Borrar" : "Delete";
   });
 }
 

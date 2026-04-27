@@ -92,6 +92,14 @@ function applyLanguage(language) {
   document.querySelectorAll("[data-lang-option]").forEach((node) => {
     node.classList.toggle("is-active", node.dataset.langOption === currentLanguage);
   });
+
+  const toggle = document.getElementById("detail-description-toggle");
+  if (toggle && !toggle.hidden) {
+    const expanded = toggle.getAttribute("aria-expanded") === "true";
+    toggle.textContent = expanded
+      ? currentLanguage === "es" ? "Ver menos" : "Show less"
+      : currentLanguage === "es" ? "Ver mas" : "Show more";
+  }
 }
 
 function revealElements() {
