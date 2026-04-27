@@ -1,1 +1,50 @@
-[]
+[
+  {
+    "id": "930ddc7f-38ad-4800-ac03-2b31881fedfe",
+    "title": "Demon Suit Deira",
+    "description": "Stylized Bat Outfit – VRChat / Anime Style\n\nStylized female outfit designed for anime and VR-style characters, suitable for VRChat avatars and general 3D rendering.\n\nThis outfit features a sleek, glossy black bodysuit with a form-fitting silhouette and sharp, wing-inspired seam details on the chest. A heart-shaped semi-transparent mesh panel at the torso adds a cute yet edgy focal point. Oversized bat-wing-style sleeves with a reflective finish give the design a bold gothic and vampiric aesthetic, while a matching choker with a central jewel completes the look.\n\nPerfect for stylized avatars, renders, showcases, and customizable character models.\n\nCharacter body shown is for preview purposes only and is not included.\n\n\n\nTechnical Details\n\n\n\n\n\n6826 vertices\n\n\n\nCompatible with the Deira base\n\n\n\nDeira base model is not included\n\n\n\nNo blendshapes included\n\n\n\nOptimized for VRChat / Unity / Blende",
+    "tags": [
+      "Blender",
+      "Vrchat",
+      "Clothes",
+      "Unity",
+      "Bodysuit"
+    ],
+    "link": "https://alphfem.gumroad.com/l/DemonDeiraSuit",
+    "coverImage": "https://github.com/alphfemboy-cyber/alphy-portfolio/blob/main/images/project-3/proyect3.1.jpg",
+    "gallery": [
+      "https://github.com/alphfemboy-cyber/alphy-portfolio/blob/main/images/project-3"
+    ],
+    "accent": "#f7cade"
+  },
+  {
+    "id": "7c03296f-3549-4572-ab06-2579413247ed",
+    "title": "Bunny Strap Set For Deira",
+    "description": "Stylized Female Outfit – VRChat / Anime Style\n\nStylized female outfit designed for anime and VR-style characters, suitable for use in VRChat avatars and general 3D rendering.\n\nThe outfit features a fitted bodysuit with soft pastel accents and subtle pattern details. Black contrasting elements include thigh-high stockings, shoulder sleeves, and a minimal lower garment that creates a strong visual contrast. A harness-style strap system wraps around the torso, featuring a metallic buckle at the chest and vertical straps that enhance the silhouette and add a modern, edgy touch.\n\nThe overall design emphasizes a sleek, form-fitting shape while maintaining a cute yet slightly provocative aesthetic. Ideal for stylized avatars, renders, showcases, and customizable character models.\nCharacter body shown is for preview purposes only and is not included.\n\nOriginal Design\n\n\n\n\n\nOriginal design by Korura Club\n\nTechnical Details\n\n\n\n\n\n10,975 vertices\n\n\n\n3 materials\n\n\n\nPrefab included\n\n\n\nCompatible with the Deira base\n\n\n\nDeira base model is not included\n\n\n\nblendshapes included: Breast size Tiger",
+    "tags": [],
+    "link": "https://alphfem.gumroad.com/l/bunnyDeira",
+    "coverImage": "https://github.com/alphfemboy-cyber/alphy-portfolio/blob/main/images/project-2/proyect2.1.jpg",
+    "gallery": [
+      "https://github.com/alphfemboy-cyber/alphy-portfolio/blob/main/images/project-2"
+    ],
+    "accent": "#f7cade"
+  },
+  {
+    "id": "bc0d87d8-76ae-43c8-bdef-16caaf2682ba",
+    "title": "Kitten Set Cute For Deira",
+    "description": "Cute / kawaii style clothing set, designed specifically for the Deira body base.\n\nIncludes a short bandeau-style top in black with a cute cat face design on the front, complemented by thin straps that give it a delicate and stylish look. The bottom piece is a simple black underwear-style garment, featuring a decorative paw print on the back and cat ears on the front, maintaining an adorable overall aesthetic.\n\nThe mesh is highly optimized, with 2,347 vertices, making it ideal for use in VRChat and other real-time environments. The object includes only the clothing; the body base is not included.\nIt does not contain blendshapes, allowing for a clean and flexible workflow for adjustments or customization.\n\nDEPENDENCES\n\npoiyomi toon shader",
+    "tags": [
+      "Blender",
+      "Vrchat",
+      "Clothes",
+      "Unity",
+      "Bodysuit"
+    ],
+    "link": "https://alphfem.gumroad.com/l/CatSet",
+    "coverImage": "https://github.com/alphfemboy-cyber/alphy-portfolio/blob/main/images/project-1/proyect1.1.jpg",
+    "gallery": [
+      "https://github.com/alphfemboy-cyber/alphy-portfolio/blob/main/images/project-1"
+    ],
+    "accent": "#f7d7e4"
+  }
+]
