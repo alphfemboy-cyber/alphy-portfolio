@@ -18,7 +18,68 @@
     "description": "Set de accesorios y piezas de vestuario con detalle ornamental, materiales suaves y lectura clara para escenas cercanas.",
     "tags": ["3D Modeling", "Texturing", "Realtime"],
     "link": "https://example.com/project/celestial-props",
+    "accent": "#f2c8da",[
+  {
+    "id": "bc0d87d8-76ae-43c8-bdef-16caaf2682ba",
+    "title": "Kitten Set Cute",
+    "description": "Cute / kawaii style clothing set, designed specifically for the Deira body base.\n\nIncludes a short bandeau-style top in black with a cute cat face design on the front, complemented by thin straps that give it a delicate and stylish look. The bottom piece is a simple black underwear-style garment, featuring a decorative paw print on the back and cat ears on the front, maintaining an adorable overall aesthetic.\n\nThe mesh is highly optimized, with 2,347 vertices, making it ideal for use in VRChat and other real-time environments. The object includes only the clothing; the body base is not included.\nIt does not contain blendshapes, allowing for a clean and flexible workflow for adjustments or customization.\n\nDEPENDENCES\n\npoiyomi toon shader",
+    "tags": [
+      "Blender",
+      "Vrchat",
+      "Clothes",
+      "Unity",
+      "Bodysuit"
+    ],
+    "link": "https://alphfem.gumroad.com/l/CatSet",
+    "coverImage": "https://github.com/alphfemboy-cyber/alphy-portfolio/blob/main/images/images/project-1/proyect1.1.jpg",
+    "gallery": [
+      "https://github.com/alphfemboy-cyber/alphy-portfolio/tree/main/images/images/project-1"
+    ],
+    "accent": "#f7d7e4"
+  },
+  {
+    "id": "dream-room-asset-pack",
+    "title": "Dream Room Asset Pack",
+    "description": "Coleccion de props estilizados para una habitacion con enfoque en silueta limpia, color suave y optimizacion para tiempo real.",
+    "tags": [
+      "Blender",
+      "Stylized",
+      "Game Ready"
+    ],
+    "link": "https://example.com/project/dream-room",
+    "accent": "#f7cade",
+    "coverImage": "",
+    "gallery": []
+  },
+  {
+    "id": "celestial-character-props",
+    "title": "Celestial Character Props",
+    "description": "Set de accesorios y piezas de vestuario con detalle ornamental, materiales suaves y lectura clara para escenas cercanas.",
+    "tags": [
+      "3D Modeling",
+      "Texturing",
+      "Realtime"
+    ],
+    "link": "https://example.com/project/celestial-props",
     "accent": "#f2c8da",
+    "coverImage": "",
+    "gallery": []
+  },
+  {
+    "id": "soft-market-environment",
+    "title": "Soft Market Environment",
+    "description": "Exploracion visual de assets modulares para un entorno pequeno, pensados para variedad, rendimiento y coherencia de estilo.",
+    "tags": [
+      "Environment",
+      "Modular",
+      "Lookdev"
+    ],
+    "link": "https://example.com/project/soft-market",
+    "accent": "#f9e4ee",
+    "coverImage": "",
+    "gallery": []
+  }
+]
     "coverImage": "./images/project-2/cover.jpg",
     "gallery": [
       "./images/project-2/render-1.jpg",
