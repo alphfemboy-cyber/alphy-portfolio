@@ -21,16 +21,20 @@
       <header class="topbar">
         <a class="brand" href="./index.html">Alphy</a>
         <nav class="nav">
-          <a href="./index.html#proyectos">Proyectos</a>
-          <a href="./index.html#sobre-mi">Sobre mi</a>
-          <a href="./index.html#contacto">Contacto</a>
+          <a href="./index.html#proyectos" data-i18n="nav.projects">Proyectos</a>
+          <a href="./index.html#sobre-mi" data-i18n="nav.about">Sobre mi</a>
+          <a href="./index.html#contacto" data-i18n="nav.contact">Contacto</a>
+          <button class="lang-toggle" type="button" id="lang-toggle" aria-label="Cambiar idioma">
+            <span data-lang-option="es">ES</span>
+            <span data-lang-option="en">EN</span>
+          </button>
         </nav>
       </header>
 
       <main class="project-detail" id="project-detail">
         <section class="project-detail-hero">
           <div class="project-detail-copy reveal">
-            <p class="eyebrow">Project Detail</p>
+            <p class="eyebrow" data-i18n="detail.eyebrow">Project Detail</p>
             <h1 id="detail-title">Cargando proyecto...</h1>
             <div class="project-detail-text">
               <p class="project-detail-description is-collapsed" id="detail-description"></p>
@@ -41,9 +45,9 @@
             <div class="project-tags" id="detail-tags"></div>
             <div class="hero-actions">
               <a class="button primary" id="detail-link" href="#" target="_blank" rel="noreferrer">
-                Ver link del proyecto
+                <span data-i18n="detail.link">Ver link del proyecto</span>
               </a>
-              <a class="button ghost" href="./index.html#proyectos">Volver</a>
+              <a class="button ghost" href="./index.html#proyectos" data-i18n="detail.back">Volver</a>
             </div>
           </div>
           <div class="project-detail-cover reveal" id="detail-cover"></div>
@@ -51,8 +55,8 @@
 
         <section class="project-gallery-section reveal">
           <div class="section-heading">
-            <p class="eyebrow">Gallery</p>
-            <h2>Imagenes del proyecto</h2>
+            <p class="eyebrow" data-i18n="detail.galleryEyebrow">Gallery</p>
+            <h2 data-i18n="detail.galleryTitle">Imagenes del proyecto</h2>
           </div>
           <div class="project-gallery-grid" id="detail-gallery"></div>
         </section>

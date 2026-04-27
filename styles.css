@@ -92,6 +92,30 @@ textarea {
   flex-wrap: wrap;
 }
 
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(253, 239, 245, 0.92);
+  cursor: pointer;
+}
+
+.lang-toggle span {
+  min-width: 36px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  font-weight: 700;
+  color: var(--text-soft);
+}
+
+.lang-toggle span.is-active {
+  background: linear-gradient(135deg, var(--accent-strong), var(--accent-deep));
+  color: #ffffff;
+}
+
 .nav a,
 .nav-button,
 .text-button,

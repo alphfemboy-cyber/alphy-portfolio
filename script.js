@@ -1,5 +1,68 @@
 const STORAGE_KEY = "alphy-portfolio-projects-draft";
 const PROJECTS_FILE = "./projects.json";
+const LANGUAGE_KEY = "alphy-portfolio-language";
+const translations = {
+  es: {
+    "nav.projects": "Proyectos",
+    "nav.about": "Sobre mi",
+    "nav.contact": "Contacto",
+    "nav.edit": "Editar proyectos",
+    "hero.eyebrow": "3D Artist / Modelado y Texturizado",
+    "hero.description": "Artista 3D especializado en modelado y texturizado de assets digitales, con enfoque en calidad visual, estilo y optimizacion para tiempo real.",
+    "hero.cta": "Ver proyectos",
+    "hero.noteTop": "Coquette digital mood",
+    "hero.noteBottom": "Soft romantic portfolio",
+    "highlight.oneTitle": "Assets con estilo",
+    "highlight.oneBody": "Piezas pensadas para verse bien de cerca y funcionar bien en escenas de tiempo real.",
+    "highlight.twoTitle": "Texturas cuidadas",
+    "highlight.twoBody": "Materiales con identidad visual clara, detalle y equilibrio entre forma y lectura.",
+    "highlight.threeTitle": "Flujo flexible",
+    "highlight.threeBody": "Portfolio preparado para seguir creciendo con nuevos proyectos y versiones.",
+    "projects.eyebrow": "Selected Work",
+    "projects.title": "Proyectos",
+    "projects.body": "Esta seccion se actualiza desde el editor integrado. Puedes agregar, editar o borrar proyectos cuando quieras.",
+    "about.eyebrow": "Sobre mi",
+    "about.title": "Modelado con sensibilidad visual",
+    "about.bodyOne": "Me enfoco en crear assets digitales con personalidad, cuidando la silueta, los materiales y la lectura final de cada pieza. Busco un balance entre estilo, detalle y optimizacion para que cada modelo conserve su impacto visual tambien en tiempo real.",
+    "about.bodyTwo": "Mi trabajo mezcla una direccion artistica suave con decisiones tecnicas pensadas para produccion, presentacion y uso interactivo.",
+    "contact.eyebrow": "Contacto",
+    "contact.title": "Hablemos de tu proximo proyecto",
+    "contact.note": "Espanol principal, ingles basico para comunicacion simple.",
+    "editor.eyebrow": "Project Editor",
+    "editor.title": "Editar proyectos",
+    "editor.close": "Cerrar"
+  },
+  en: {
+    "nav.projects": "Projects",
+    "nav.about": "About",
+    "nav.contact": "Contact",
+    "nav.edit": "Edit projects",
+    "hero.eyebrow": "3D Artist / Modeling & Texturing",
+    "hero.description": "3D artist specialized in modeling and texturing digital assets, with a focus on visual quality, style, and real-time optimization.",
+    "hero.cta": "View projects",
+    "hero.noteTop": "Coquette digital mood",
+    "hero.noteBottom": "Soft romantic portfolio",
+    "highlight.oneTitle": "Stylish assets",
+    "highlight.oneBody": "Pieces designed to look great up close and perform well in real-time scenes.",
+    "highlight.twoTitle": "Careful texturing",
+    "highlight.twoBody": "Materials with clear visual identity, detail, and balance between form and readability.",
+    "highlight.threeTitle": "Flexible workflow",
+    "highlight.threeBody": "A portfolio prepared to keep growing with new projects and versions.",
+    "projects.eyebrow": "Selected Work",
+    "projects.title": "Projects",
+    "projects.body": "This section updates from the integrated editor. You can add, edit, or remove projects whenever you want.",
+    "about.eyebrow": "About",
+    "about.title": "Modeling with visual sensitivity",
+    "about.bodyOne": "I focus on creating digital assets with personality, taking care of silhouette, materials, and the final readability of each piece. I look for a balance between style, detail, and optimization so every model keeps its visual impact in real-time use.",
+    "about.bodyTwo": "My work blends a soft art direction with technical decisions made for production, presentation, and interactive use.",
+    "contact.eyebrow": "Contact",
+    "contact.title": "Let's talk about your next project",
+    "contact.note": "Spanish first, basic English for simple communication.",
+    "editor.eyebrow": "Project Editor",
+    "editor.title": "Edit projects",
+    "editor.close": "Close"
+  }
+};
 
 const fallbackProjects = [];
 
@@ -26,9 +89,11 @@ const elements = {
   projectCoverImage: document.getElementById("project-cover-image"),
   projectGallery: document.getElementById("project-gallery"),
   projectAccent: document.getElementById("project-accent"),
+  langToggle: document.getElementById("lang-toggle"),
 };
 
 let projects = [];
+let currentLanguage = localStorage.getItem(LANGUAGE_KEY) || "es";
 
 function normalizeProjects(items) {
   if (!Array.isArray(items)) {
@@ -86,6 +151,23 @@ function saveProjects() {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(projects));
 }
 
+function applyLanguage(language) {
+  currentLanguage = translations[language] ? language : "es";
+  localStorage.setItem(LANGUAGE_KEY, currentLanguage);
+  document.documentElement.lang = currentLanguage;
+
+  document.querySelectorAll("[data-i18n]").forEach((node) => {
+    const value = translations[currentLanguage][node.dataset.i18n];
+    if (typeof value === "string") {
+      node.textContent = value;
+    }
+  });
+
+  elements.langToggle?.querySelectorAll("[data-lang-option]").forEach((node) => {
+    node.classList.toggle("is-active", node.dataset.langOption === currentLanguage);
+  });
+}
+
 function renderProjects() {
   elements.projectsGrid.innerHTML = "";
   elements.projectList.innerHTML = "";
@@ -137,11 +219,13 @@ function renderProjects() {
     description.textContent = project.description;
     description.classList.toggle("is-collapsed", project.description.length > 180);
     descriptionToggle.hidden = project.description.length <= 180;
-    descriptionToggle.textContent = "Ver mas";
+    descriptionToggle.textContent = currentLanguage === "es" ? "Ver mas" : "Show more";
     descriptionToggle.setAttribute("aria-expanded", "false");
     descriptionToggle.addEventListener("click", () => {
       const isCollapsed = description.classList.toggle("is-collapsed");
-      descriptionToggle.textContent = isCollapsed ? "Ver mas" : "Ver menos";
+      descriptionToggle.textContent = isCollapsed
+        ? currentLanguage === "es" ? "Ver mas" : "Show more"
+        : currentLanguage === "es" ? "Ver menos" : "Show less";
       descriptionToggle.setAttribute("aria-expanded", String(!isCollapsed));
     });
     tags.innerHTML = "";
@@ -168,14 +252,23 @@ function renderProjects() {
     const itemNode = elements.itemTemplate.content.firstElementChild.cloneNode(true);
     itemNode.querySelector(".item-title").textContent = project.title;
     itemNode.querySelector(".item-description").textContent = project.description;
-    itemNode.querySelector(".item-up").addEventListener("click", () => moveProject(project.id, -1));
-    itemNode.querySelector(".item-down").addEventListener("click", () => moveProject(project.id, 1));
-    itemNode.querySelector(".item-edit").addEventListener("click", () => fillForm(project.id));
-    itemNode.querySelector(".item-delete").addEventListener("click", () => deleteProject(project.id));
+    const upButton = itemNode.querySelector(".item-up");
+    const downButton = itemNode.querySelector(".item-down");
+    const editButton = itemNode.querySelector(".item-edit");
+    const deleteButton = itemNode.querySelector(".item-delete");
+    upButton.textContent = currentLanguage === "es" ? "Subir" : "Up";
+    downButton.textContent = currentLanguage === "es" ? "Bajar" : "Down";
+    editButton.textContent = currentLanguage === "es" ? "Editar" : "Edit";
+    deleteButton.textContent = currentLanguage === "es" ? "Borrar" : "Delete";
+    upButton.addEventListener("click", () => moveProject(project.id, -1));
+    downButton.addEventListener("click", () => moveProject(project.id, 1));
+    editButton.addEventListener("click", () => fillForm(project.id));
+    deleteButton.addEventListener("click", () => deleteProject(project.id));
     elements.projectList.appendChild(itemNode);
   });
 
   revealElements();
+  applyLanguage(currentLanguage);
 }
 
 function fillForm(projectId) {
@@ -360,6 +453,10 @@ elements.closeButtons.forEach((button) => {
   button.addEventListener("click", closeEditor);
 });
 
+elements.langToggle?.addEventListener("click", () => {
+  applyLanguage(currentLanguage === "es" ? "en" : "es");
+});
+
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     closeEditor();
@@ -369,6 +466,7 @@ document.addEventListener("keydown", (event) => {
 async function init() {
   projects = await loadProjects();
   renderProjects();
+  applyLanguage(currentLanguage);
 }
 
 init();

@@ -21,11 +21,15 @@
       <header class="topbar">
         <a class="brand" href="#inicio">Alphy</a>
         <nav class="nav">
-          <a href="#proyectos">Proyectos</a>
-          <a href="#sobre-mi">Sobre mi</a>
-          <a href="#contacto">Contacto</a>
+          <a href="#proyectos" data-i18n="nav.projects">Proyectos</a>
+          <a href="#sobre-mi" data-i18n="nav.about">Sobre mi</a>
+          <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+          <button class="lang-toggle" type="button" id="lang-toggle" aria-label="Cambiar idioma">
+            <span data-lang-option="es">ES</span>
+            <span data-lang-option="en">EN</span>
+          </button>
           <button class="nav-button" type="button" data-open-editor>
-            Editar proyectos
+            <span data-i18n="nav.edit">Editar proyectos</span>
           </button>
         </nav>
       </header>
@@ -33,18 +37,18 @@
       <main>
         <section class="hero" id="inicio">
           <div class="hero-copy reveal">
-            <p class="eyebrow">3D Artist / Modelado y Texturizado</p>
+            <p class="eyebrow" data-i18n="hero.eyebrow">3D Artist / Modelado y Texturizado</p>
             <h1>Alphy</h1>
             <p class="hero-quote">
               "Love is the one thing that transcends time and space"
             </p>
-            <p class="hero-description">
+            <p class="hero-description" data-i18n="hero.description">
               Artista 3D especializado en modelado y texturizado de assets
               digitales, con enfoque en calidad visual, estilo y optimizacion
               para tiempo real.
             </p>
             <div class="hero-actions">
-              <a class="button primary" href="#proyectos">Ver proyectos</a>
+              <a class="button primary" href="#proyectos" data-i18n="hero.cta">Ver proyectos</a>
               <a
                 class="button ghost"
                 href="https://wa.me/524451614365"
@@ -62,8 +66,8 @@
             <div class="art-card art-large"></div>
             <div class="art-card art-small"></div>
             <div class="floating-note">
-              <span>Coquette digital mood</span>
-              <strong>Soft romantic portfolio</strong>
+              <span data-i18n="hero.noteTop">Coquette digital mood</span>
+              <strong data-i18n="hero.noteBottom">Soft romantic portfolio</strong>
             </div>
           </div>
         </section>
@@ -71,24 +75,24 @@
         <section class="highlights reveal">
           <article>
             <span>01</span>
-            <h2>Assets con estilo</h2>
-            <p>
+            <h2 data-i18n="highlight.oneTitle">Assets con estilo</h2>
+            <p data-i18n="highlight.oneBody">
               Piezas pensadas para verse bien de cerca y funcionar bien en
               escenas de tiempo real.
             </p>
           </article>
           <article>
             <span>02</span>
-            <h2>Texturas cuidadas</h2>
-            <p>
+            <h2 data-i18n="highlight.twoTitle">Texturas cuidadas</h2>
+            <p data-i18n="highlight.twoBody">
               Materiales con identidad visual clara, detalle y equilibrio entre
               forma y lectura.
             </p>
           </article>
           <article>
             <span>03</span>
-            <h2>Flujo flexible</h2>
-            <p>
+            <h2 data-i18n="highlight.threeTitle">Flujo flexible</h2>
+            <p data-i18n="highlight.threeBody">
               Portfolio preparado para seguir creciendo con nuevos proyectos y
               versiones.
             </p>
@@ -97,9 +101,9 @@
 
         <section class="projects-section" id="proyectos">
           <div class="section-heading reveal">
-            <p class="eyebrow">Selected Work</p>
-            <h2>Proyectos</h2>
-            <p>
+            <p class="eyebrow" data-i18n="projects.eyebrow">Selected Work</p>
+            <h2 data-i18n="projects.title">Proyectos</h2>
+            <p data-i18n="projects.body">
               Esta seccion se actualiza desde el editor integrado. Puedes
               agregar, editar o borrar proyectos cuando quieras.
             </p>
@@ -109,23 +113,23 @@
 
         <section class="about-contact">
           <article class="about-card reveal" id="sobre-mi">
-            <p class="eyebrow">Sobre mi</p>
-            <h2>Modelado con sensibilidad visual</h2>
-            <p>
+            <p class="eyebrow" data-i18n="about.eyebrow">Sobre mi</p>
+            <h2 data-i18n="about.title">Modelado con sensibilidad visual</h2>
+            <p data-i18n="about.bodyOne">
               Me enfoco en crear assets digitales con personalidad, cuidando la
               silueta, los materiales y la lectura final de cada pieza. Busco
               un balance entre estilo, detalle y optimizacion para que cada
               modelo conserve su impacto visual tambien en tiempo real.
             </p>
-            <p>
+            <p data-i18n="about.bodyTwo">
               Mi trabajo mezcla una direccion artistica suave con decisiones
               tecnicas pensadas para produccion, presentacion y uso interactivo.
             </p>
           </article>
 
           <article class="contact-card reveal" id="contacto">
-            <p class="eyebrow">Contacto</p>
-            <h2>Hablemos de tu proximo proyecto</h2>
+            <p class="eyebrow" data-i18n="contact.eyebrow">Contacto</p>
+            <h2 data-i18n="contact.title">Hablemos de tu proximo proyecto</h2>
             <div class="contact-list">
               <a href="mailto:alphfemboy@gmail.com">alphfemboy@gmail.com</a>
               <a
@@ -143,7 +147,7 @@
                 WhatsApp / 445 161 4365
               </a>
             </div>
-            <p class="contact-note">
+            <p class="contact-note" data-i18n="contact.note">
               Espanol principal, ingles basico para comunicacion simple.
             </p>
           </article>
@@ -156,11 +160,11 @@
       <section class="drawer-panel" aria-label="Editor de proyectos">
         <div class="drawer-header">
           <div>
-            <p class="eyebrow">Project Editor</p>
-            <h2>Editar proyectos</h2>
+            <p class="eyebrow" data-i18n="editor.eyebrow">Project Editor</p>
+            <h2 data-i18n="editor.title">Editar proyectos</h2>
           </div>
           <button class="icon-button" type="button" data-close-editor>
-            Cerrar
+            <span data-i18n="editor.close">Cerrar</span>
           </button>
         </div>
 
