@@ -7,8 +7,8 @@ const translations = {
     "nav.about": "Sobre mi",
     "nav.contact": "Contacto",
     "detail.eyebrow": "Project Detail",
-    "detail.gumroad": "Ver Gumroad",
-    "detail.booth": "Ver Booth",
+    "detail.gumroad": "Gumroad",
+    "detail.booth": "Booth",
     "detail.back": "Volver",
     "detail.galleryEyebrow": "Gallery",
     "detail.galleryTitle": "Imagenes del proyecto"
@@ -18,8 +18,8 @@ const translations = {
     "nav.about": "About",
     "nav.contact": "Contact",
     "detail.eyebrow": "Project Detail",
-    "detail.gumroad": "View Gumroad",
-    "detail.booth": "View Booth",
+    "detail.gumroad": "Gumroad",
+    "detail.booth": "Booth",
     "detail.back": "Back",
     "detail.galleryEyebrow": "Gallery",
     "detail.galleryTitle": "Project images"
