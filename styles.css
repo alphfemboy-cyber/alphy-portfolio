@@ -413,8 +413,8 @@ textarea {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 22px;
-  height: 22px;
+  width: 18px;
+  height: 18px;
   border-radius: 999px;
   font-size: 0.72rem;
   font-weight: 800;
@@ -423,8 +423,8 @@ textarea {
 }
 
 .store-mark img {
-  width: 14px;
-  height: 14px;
+  width: 11px;
+  height: 11px;
   display: block;
 }
 
