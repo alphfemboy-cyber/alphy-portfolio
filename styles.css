@@ -419,6 +419,13 @@ textarea {
   font-size: 0.72rem;
   font-weight: 800;
   line-height: 1;
+  overflow: hidden;
+}
+
+.store-mark img {
+  width: 14px;
+  height: 14px;
+  display: block;
 }
 
 .store-mark-gumroad {
