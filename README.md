@@ -1,6 +1,6 @@
 # Alphy Portfolio
 
-Portfolio creativo en HTML, CSS y JavaScript.
+Portfolio en HTML, CSS y JavaScript.
 
 ## Abrir localmente
 
